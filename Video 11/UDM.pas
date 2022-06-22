@@ -16,6 +16,10 @@ type
     FDTransaction: TFDTransaction;
     FDTable1: TFDTable;
     DataSource1: TDataSource;
+    FDTable1VALORVENDAPROD: TFMTBCDField;
+    FDTable1ESTOQUEPROD: TLargeintField;
+    FDTable1NOMEPROD: TStringField;
+    FDTable1PKPROD: TLargeintField;
   private
     { Private declarations }
   public
