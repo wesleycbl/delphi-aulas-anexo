@@ -9,46 +9,28 @@ object DM: TDM
       'Password=masterkey'
       'DriverID=IB')
     Connected = True
-    Left = 112
+    Left = 24
     Top = 16
   end
   object FDTransaction: TFDTransaction
     Connection = FDConnection
-    Left = 112
-    Top = 80
+    Left = 96
+    Top = 16
   end
-  object FDTable1: TFDTable
+  object SqlProduto: TFDQuery
     Active = True
-    IndexFieldNames = 'PKPROD'
     Connection = FDConnection
     Transaction = FDTransaction
-    TableName = 'TBPRODUTO'
-    Left = 112
-    Top = 136
-    object FDTable1VALORVENDAPROD: TFMTBCDField
-      FieldName = 'VALORVENDAPROD'
-      Origin = 'VALORVENDAPROD'
-      Precision = 18
-      Size = 2
-    end
-    object FDTable1ESTOQUEPROD: TLargeintField
-      FieldName = 'ESTOQUEPROD'
-      Origin = 'ESTOQUEPROD'
-    end
-    object FDTable1NOMEPROD: TStringField
-      FieldName = 'NOMEPROD'
-      Origin = 'NOMEPROD'
-      Size = 80
-    end
-    object FDTable1PKPROD: TLargeintField
-      FieldName = 'PKPROD'
-      Origin = 'PKPROD'
-      Required = True
-    end
+    SQL.Strings = (
+      'select'
+      ' *'
+      'from tbproduto')
+    Left = 24
+    Top = 72
   end
-  object DataSource1: TDataSource
-    DataSet = FDTable1
-    Left = 112
-    Top = 192
+  object DSSQLProduto: TDataSource
+    DataSet = SqlProduto
+    Left = 96
+    Top = 88
   end
 end

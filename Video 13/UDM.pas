@@ -16,10 +16,21 @@ type
     FDTransaction: TFDTransaction;
     SqlProduto: TFDQuery;
     DSSQLProduto: TDataSource;
+    SqlProdutoVALORVENDAPROD: TFMTBCDField;
+    SqlProdutoESTOQUEPROD: TLargeintField;
+    SqlProdutoNOMEPROD: TStringField;
+    SqlProdutoPKPROD: TLargeintField;
+    FDTransactionAltera: TFDTransaction;
+    SQLModifica: TFDQuery;
+    FMTBCDField1: TFMTBCDField;
+    LargeintField1: TLargeintField;
+    StringField1: TStringField;
+    LargeintField2: TLargeintField;
   private
     { Private declarations }
   public
     { Public declarations }
+    procedure executaSQL(sqle: string; Q: TFDQuery);
   end;
 
 var
@@ -28,7 +39,24 @@ var
 implementation
 
 {%CLASSGROUP 'Vcl.Controls.TControl'}
-
 {$R *.dfm}
+{ TDM }
+
+procedure TDM.executaSQL(sqle: string; Q: TFDQuery);
+begin
+  sqle := trim(sqle);
+  with Q do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Add(sqle);
+
+    if UpperCase(Copy(sqle, 1, 6)) = 'SELECT' then
+      Open
+    else
+      Q.ExecSQL;
+  end;
+
+end;
 
 end.

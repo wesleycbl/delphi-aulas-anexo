@@ -126,7 +126,7 @@ begin
     acaogeral := 3;
     controleBotoes(3);
   except
-      ShowMessage('Erro ao Salvar dados !');
+    ShowMessage('Erro ao Salvar dados !');
   end;
 
 end;
@@ -146,15 +146,15 @@ begin
         limpar();
         btSalvar.Enabled := true;
         btCancelar.Enabled := true;
-        if edtCodProd.CanFocus then
-          edtCodProd.SetFocus;
+        if edtNome.CanFocus then
+          edtNome.SetFocus;
       end;
     1:
       begin
         btSalvar.Enabled := true;
         btCancelar.Enabled := true;
-        if edtCodProd.CanFocus then
-          edtCodProd.SetFocus;
+        if edtNome.CanFocus then
+          edtNome.SetFocus;
 
       end;
   else

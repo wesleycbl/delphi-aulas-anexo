@@ -20,7 +20,6 @@ object FCadProduto: TFCadProduto
     Top = 8
     Width = 721
     Height = 177
-    Caption = 'PDados'
     TabOrder = 0
     object Label1: TLabel
       Left = 24
@@ -55,6 +54,7 @@ object FCadProduto: TFCadProduto
       Top = 40
       Width = 121
       Height = 21
+      Enabled = False
       TabOrder = 0
     end
     object edtNome: TEdit
