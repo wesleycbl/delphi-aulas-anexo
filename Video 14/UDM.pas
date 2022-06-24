@@ -18,15 +18,7 @@ type
     DSSQLProduto: TDataSource;
     FDTransactionAltera: TFDTransaction;
     SQLModifica: TFDQuery;
-    FMTBCDField1: TFMTBCDField;
-    LargeintField1: TLargeintField;
-    StringField1: TStringField;
-    LargeintField2: TLargeintField;
     SQLGeral: TFDQuery;
-    FMTBCDField2: TFMTBCDField;
-    LargeintField3: TLargeintField;
-    StringField2: TStringField;
-    LargeintField4: TLargeintField;
   private
     { Private declarations }
   public
